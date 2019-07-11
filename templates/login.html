@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <title>Hospital</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="keyword" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css' %}" />
+    </head>
+    <body>
+        <div class="login-wrapper fullwidth pull-left position-relative">
+            <div class="login m-auto fullwidth bg-white p-4 d-table mr-3 ml-3">
+                <h3>Sign In</h3>
+                <form method="post" action="." enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p class="fullwidth pull-left mb-1">Email address</p>
+                    <input type="email" name="email" placeholder="Email" class="fullwidth pull-left mb-3 p-2" />
+                    <p class="fullwidth pull-left mb-1">Password</p>
+                    <input type="password" name="password" placeholder="Password" class="fullwidth pull-left mb-3 p-2" />
+                    <input type="checkbox" class="pull-left mr-2 mt-2"><span class="ft-12"> Keep me logged in</span>
+                    <a href="" class="pull-right ft-12">Forgot Password ?</a>
+                    <button class="fullwidth pull-left mt-4 pt-2 pb-2" type="submit">Sign In</button>
+                    <p class="text-center pull-left fullwidth mt-3 mb-0 ft-12">Don't have an account? <a href="{% url 'signup' %}">Create an Account</a></p>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

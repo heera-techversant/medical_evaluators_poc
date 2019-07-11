@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <title>Hospital</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="keyword" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css' %}" />
+    </head>
+    <body>
+        <div class="login-wrapper fullwidth pull-left position-relative">
+            <div class="login m-auto fullwidth bg-white p-4 d-table mr-3 ml-3">
+                <h3>Register</h3>
+                <form method="post" action="." enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p class="fullwidth pull-left mb-1">Name*</p>
+                    <input type="text" name="first_name" placeholder="Enter your Name" class="fullwidth pull-left mb-3 p-2" />
+                    <p class="fullwidth pull-left mb-1">Email address*</p>
+                    <input type="email" name="username" placeholder="Email" class="fullwidth pull-left mb-3 p-2" />
+                    <p class="fullwidth pull-left mb-1">Password*</p>
+                    <input type="password" name="password1" placeholder="Password" class="fullwidth pull-left mb-3 p-2" />
+                    <p class="fullwidth pull-left mb-1">Confirm Password*</p>
+                    <input type="password" name="password2" placeholder="Password" class="fullwidth pull-left mb-3 p-2" />
+                    <button class="fullwidth pull-left mt-4 pt-2 pb-2" type="submit">Register</button>
+                    <p class="text-center pull-left fullwidth mt-3 mb-0 ft-12">Already have an account? <a href="{% url 'signin' %}">Login</a></p>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
