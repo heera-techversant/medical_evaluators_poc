@@ -6,7 +6,7 @@ docx2txt==0.6
 EbookLib==0.15
 lxml==4.3.3
 pdfminer.six==20181108
-Pillow==6.0.0
+Pillow==8.3.2
 pycryptodome==3.8.1
 PyPDF2==1.26.0
 pytesseract==0.2.6
